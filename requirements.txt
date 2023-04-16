@@ -1,5 +1,4 @@
-
-python==3.10.6
-pip==22.0.2
+Pillow==9.0.1
+Pillow==9.5.0
 streamlit==1.21.0
 yfinance==0.2.17
