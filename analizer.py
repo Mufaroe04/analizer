@@ -1,5 +1,5 @@
 import streamlit as st
-import  pandas as pd
+# import  pandas as pd
 import yfinance as yf
 from PIL import Image
 import time
