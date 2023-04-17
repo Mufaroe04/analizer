@@ -15,7 +15,6 @@ def bit_coin():
             btc=yf.download(bitcoin,start=start_date ,end=end_date)
             st.table(btc)
 
-    st.table(btc)
     bit_history=bitcoin_data.history(period="max")
     st.bar_chart(bit_history.Close)
    
