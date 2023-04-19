@@ -1,6 +1,7 @@
 import streamlit as st
 # import  pandas as pd
 import yfinance as yf
+import plotly.graph_objects as go
 from PIL import Image
 import time
 def bit_coin():
@@ -13,6 +14,7 @@ def bit_coin():
         end_date = st.date_input('Enter ending date for historical data')
         if start_date and end_date:
             btc=yf.download(bitcoin,start=start_date ,end=end_date)
+            
             st.table(btc)
 
     bit_history=bitcoin_data.history(period="max")
@@ -30,6 +32,8 @@ def ethereum():
         st.table(eth)
     ethereum_history=ethereum_data.history(period="max")
     st.bar_chart(ethereum_history)
+    pl=st.empty()
+
    
 def ripple():
     ripple_image=Image.open('ripple.jpeg')
